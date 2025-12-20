@@ -50,6 +50,7 @@ in
 				    };
 					clip-to-geometry = true;
 				}
+				
 			];
 			spawn-at-startup = [
 				{ argv = ["waybar"]; }
