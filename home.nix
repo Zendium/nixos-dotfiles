@@ -10,7 +10,7 @@
   home.stateVersion = "25.11";
 
   home.packages = with pkgs; [
-	#aseprite
+	aseprite
 	vlc
 	gimp
   	telegram-desktop
