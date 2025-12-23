@@ -10,6 +10,7 @@
   home.stateVersion = "25.11";
 
   home.packages = with pkgs; [
+	ffmpeg
 	aseprite
 	vlc
 	gimp
@@ -18,7 +19,10 @@
   	kitty
   ];
 
-  services.swayosd.enable = true;
+  services.swayosd = {
+  	enable = true;
+	stylePath = ./styles/swayosd.css;
+  };
   programs.swaylock = {
   	enable = true;
   	settings = {

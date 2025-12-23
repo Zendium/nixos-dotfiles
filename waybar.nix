@@ -7,8 +7,40 @@
     		mainBar = {
       			layer = "top";
     			modules-left  = [ "niri/workspaces" "niri/window" ];
-    			modules-right = [ "wireplumber" "network" "cpu" "clock" ];
-			 };
+    			modules-center = [ "clock" ];
+    			modules-right = [ "memory" "cpu" "wireplumber" "network" ];
+
+				"window" = {
+					truncate = 30;
+				};
+				"wireplumber" = {
+				    interval = 1;
+				    format = "{icon} {volume}%";
+				    format-muted = "󰝟";
+				 	format-icons = ["󰕿" "󰖀" "󰕾"];
+				};
+				"battery" = {
+		         	interval = 10;
+		         	format-time = "{H}:{m}";
+		         	format-icons = ["󰂎" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
+		        	format = "{icon} {capacity}% {time}";
+		        };
+		        "network" = {
+			    	interval = 10;
+			    	format-ethernet = "󰈁 {ifname} 󰕒 {bandwidthUpBits} 󰇚 {bandwidthDownBits}";
+			    	format-wifi = "󰖩 {essid} {signalStrength}% 󰕒 {bandwidthUpBits} 󰇚 {bandwidthDownBits}";
+			    	format-disconnected = "󰖪 disconnected";
+		   		};
+		   		"cpu" = {
+		   			format = " {usage}%";
+		   		};
+		   		"memory" = {
+		   		  "format" = " {used:0.1f}G";
+		   		  "interval" = 5;
+		   		};
+
+			};
+				   		
     	};
     	style = ''
     	  * {
@@ -24,9 +56,16 @@
     	  #workspaces button,
     	  #clock,
     	  #cpu,
+    	  #window,
     	  #network,
+    	  #memory,
     	  #wireplumber {
     	  	padding: 0 8px;
+    	  }
+
+    	  #clock {
+    	  	font-weight: bold;
+    	  	text-shadow: 0.5px 0 currentColor;
     	  }
     	  
     	  #workspaces button {

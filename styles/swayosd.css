@@ -1,0 +1,25 @@
+* {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 14px;
+  color: #cad3f5;
+}
+
+window#osd {
+	background: alpha(#1e2030, 0.7);
+	border: 1px solid #cad3f5;
+	border-radius: 5px;
+	padding: 0px;
+}
+
+window#osd progressbar {
+  border-radius: 999px;
+  background: #181926;
+  border: none;
+}
+
+window#osd progress {
+  min-height: inherit;
+  border-radius: inherit;
+  border: none;
+  background: #cad3f5;
+}

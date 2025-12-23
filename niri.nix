@@ -62,18 +62,18 @@ in
 			  "Mod+D".action.spawn = ["fuzzel"];
 			  "Super+Shift+L".action.spawn = ["swaylock"];
 			
-			  "XF86AudioRaiseVolume".action.spawn-sh = ["wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"];
-			  "XF86AudioLowerVolume".action.spawn-sh = ["wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"];
-			  "XF86AudioMute".action.spawn-sh = ["wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"];
-			  "XF86AudioMicMute".action.spawn-sh = ["wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"];
+			  "XF86AudioRaiseVolume".action.spawn-sh = ["swayosd-client --output-volume=+2"];
+			  "XF86AudioLowerVolume".action.spawn-sh = ["swayosd-client --output-volume=-2"];
+			  "XF86AudioMute".action.spawn-sh = ["swayosd-client --output-volume=mute-toggle"];
+			  "XF86AudioMicMute".action.spawn-sh = ["swayosd-client --input-volume=mute-toggle"];
 			
-			  "XF86AudioPlay".action.spawn-sh = ["playerctl play-pause"];
-			  "XF86AudioStop".action.spawn-sh = ["playerctl stop"];
-			  "XF86AudioPrev".action.spawn-sh = ["playerctl previous"];
-			  "XF86AudioNext".action.spawn-sh = ["playerctl next"];
+			  "XF86AudioPlay".action.spawn-sh = ["swayosd-client --playerctl=play"];
+			  "XF86AudioStop".action.spawn-sh = ["swayosd-client --playerctl=stop"];
+			  "XF86AudioPrev".action.spawn-sh = ["swayosd-client --playerctl=prev"];
+			  "XF86AudioNext".action.spawn-sh = ["swayosd-client --playerctl=next"];
 			
-			  "XF86MonBrightnessUp".action.spawn = ["brightnessctl" "--class=backlight" "set" "+5%"];
-			  "XF86MonBrightnessDown".action.spawn = ["brightnessctl" "--class=backlight" "set" "5%-"];
+			  "XF86MonBrightnessUp".action.spawn-sh = ["swayosd-client --brightness=+5"];
+			  "XF86MonBrightnessDown".action.spawn-sh = ["swayosd-client --brightness=-5"];
 			
 			  "Mod+O" = {
 			    repeat = false;
