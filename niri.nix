@@ -32,11 +32,11 @@ in
 				border = {
 					enable = true;
 					width = 2;
-					active.color = "#7fc8ff";
-					inactive.color = "#505050";
-					urgent.color = "#9b0000";
+					active.color = "#7dc4e4";
+					inactive.color = "#494d64";
+					urgent.color = "#e64553";
 				};
-				background-color = "transparent";
+				background-color = "#181926";
 			};
 			hotkey-overlay.skip-at-startup = false;
 			screenshot-path = "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png";

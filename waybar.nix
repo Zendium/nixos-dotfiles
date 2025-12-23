@@ -8,7 +8,7 @@
       			layer = "top";
     			modules-left  = [ "niri/workspaces" "niri/window" ];
     			modules-center = [ "clock" ];
-    			modules-right = [ "memory" "cpu" "wireplumber" "network" ];
+    			modules-right = [ "memory" "cpu" "wireplumber" "network" "battery" ];
 
 				"window" = {
 					truncate = 30;
@@ -21,9 +21,8 @@
 				};
 				"battery" = {
 		         	interval = 10;
-		         	format-time = "{H}:{m}";
 		         	format-icons = ["󰂎" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
-		        	format = "{icon} {capacity}% {time}";
+		        	format = "{icon} {capacity}%";
 		        };
 		        "network" = {
 			    	interval = 10;
@@ -59,6 +58,7 @@
     	  #window,
     	  #network,
     	  #memory,
+    	  battery,
     	  #wireplumber {
     	  	padding: 0 8px;
     	  }
