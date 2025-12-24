@@ -16,26 +16,26 @@
 	'';
 	
 	sddm-theme = inputs.silentSDDM.packages.${pkgs.system}.default.override {
-		theme = "rei";
+		theme = "catppuccin-macchiato";
 		extraBackgrounds = [ localBg localBgImage ];
 		theme-overrides = {
 			"General" = {
-				animated-background-placeholder = "anim_bg_placeholder_image.png";
+				#animated-background-placeholder = "anim_bg_placeholder_image.png";
 			};
       		"LoginScreen" = {
- 	     		 background = "anim_bg_placeholder.mp4";
+ 	     		 #background = "anim_bg_placeholder.mp4";
       		 };
      		"LockScreen"  = {
-     			background = "anim_bg_placeholder.mp4";
+     			#background = "anim_bg_placeholder.mp4";
      		};
      		"LockScreen.Clock" = {
-   				font-family = "Oxanium";
+   				#font-family = "Oxanium";
    			};
    			"LockScreen.Date" = {
-   				font-family = "Oxanium";
+   				#font-family = "Oxanium";
    			};
    			"LockScreen.Message" = {
-   				font-family = "Oxanium";
+   				#font-family = "Oxanium";
    			};
    			
 		};

@@ -41,6 +41,26 @@
           }
         ];
       };
+      "slabi" = nixpkgs.lib.nixosSystem {
+      	system = "x86_64-linux";
+      	specialArgs = { inherit inputs; };
+      	modules = [
+      		./slabi_configuration.nix
+      		niri.nixosModules.niri
+      		home-manager.nixosModules.home-manager
+      		{
+      			home-manager.useGlobalPkgs = true;
+      			home-manager.useUserPackages = true;
+      			home-manager.backupFileExtension = "hm-backup";
+      			home-manager.users.zendih = {
+      				imports = [
+      					./niri.nix
+      					./home.nix	
+      				];
+      			};
+      		}
+      	];
+      };
     };
   };
 }

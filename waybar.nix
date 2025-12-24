@@ -58,7 +58,7 @@
     	  #window,
     	  #network,
     	  #memory,
-    	  battery,
+    	  #battery,
     	  #wireplumber {
     	  	padding: 0 8px;
     	  }
