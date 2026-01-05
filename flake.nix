@@ -15,16 +15,19 @@
     	url = "github:uiriansan/SilentSDDM";
     	inputs.nixpkgs.follows = "nixpkgs";
     };
+    stylix = {
+        url = "github:nix-community/stylix/release-25.11";
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, niri, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, niri, stylix, ... }: {
     nixosConfigurations = {
       "mummokone" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
           ./mummokone_configuration.nix
-
           niri.nixosModules.niri
           
           home-manager.nixosModules.home-manager
@@ -45,7 +48,10 @@
       	system = "x86_64-linux";
       	specialArgs = { inherit inputs; };
       	modules = [
-      		./slabi_configuration.nix
+      		stylix.nixosModules.stylix
+      		./stylix.nix
+      		./default_configuration.nix
+      		./slabi_hardware-configuration.nix
       		niri.nixosModules.niri
       		home-manager.nixosModules.home-manager
       		{

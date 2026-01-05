@@ -36,7 +36,7 @@ in
 					inactive.color = "#494d64";
 					urgent.color = "#e64553";
 				};
-				background-color = "#181926";
+				background-color = "#181825";
 			};
 			hotkey-overlay.skip-at-startup = false;
 			screenshot-path = "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png";

@@ -16,7 +16,7 @@
 	'';
 	
 	sddm-theme = inputs.silentSDDM.packages.${pkgs.system}.default.override {
-		theme = "catppuccin-macchiato";
+		theme = "catppuccin-mocha";
 		extraBackgrounds = [ localBg localBgImage ];
 		theme-overrides = {
 			"General" = {

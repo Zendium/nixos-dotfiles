@@ -49,7 +49,7 @@
     	  
     	  window#waybar {
     	  	background-color: transparent;
-    	  	color: #cad3f5;
+    	  	color: #cdd6f4;
     	  }
     	  
     	  #workspaces button,

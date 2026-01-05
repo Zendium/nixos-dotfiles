@@ -14,7 +14,7 @@
   boot.extraModulePackages = [ ];
 
   hardware.graphics.enable = true;
-
+  networking.hostName = "slabi";
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/f8f70481-d7f4-4221-9ca9-bc006e9bc844";
       fsType = "ext4";

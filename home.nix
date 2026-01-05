@@ -10,16 +10,21 @@
   home.stateVersion = "25.11";
 
   home.packages = with pkgs; [
+  	mpv
+  	qpwgraph
 	gotop
 	ffmpeg
-	aseprite
-	vlc
+	vlc  
+	cardinal
 	gimp
-  	telegram-desktop
- 	fuzzel
-  	kitty
+	aseprite
+	steam
+	telegram-desktop
+	signal-desktop
+	fuzzel
   ];
 
+  programs.kitty.enable = true;
   services.swayosd = {
   	enable = true;
 	stylePath = ./styles/swayosd.css;
@@ -27,11 +32,9 @@
   programs.swaylock = {
   	enable = true;
   	settings = {
-  		color = "#000000";
   		indicator-radius = 10;
   		indicator-thickness = 15;
-  		layout-text-color = "#00000000";
-  	};
+    };
   };
 
   programs.zsh.enable = true;
