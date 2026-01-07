@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 let
   oxanium = pkgs.fetchFromGitHub {
@@ -31,29 +36,29 @@ let
 in
 {
   fonts = {
-	  enableDefaultPackages = true;
-	  packages = with pkgs; [
-	  	oxaniumFont
-		quicksand
-	    noto-fonts
-	    noto-fonts-cjk-sans
-	    noto-fonts-color-emoji
-	    dejavu_fonts
-	    liberation_ttf
-	    jetbrains-mono
-	    nerd-fonts.symbols-only
-	  ];
+    enableDefaultPackages = true;
+    packages = with pkgs; [
+      oxaniumFont
+      quicksand
+      noto-fonts
+      noto-fonts-cjk-sans
+      noto-fonts-color-emoji
+      dejavu_fonts
+      liberation_ttf
+      jetbrains-mono
+      nerd-fonts.symbols-only
+    ];
 
-	  fontconfig = {
-	  	enable = true;
-	  	defaultFonts = {
-	  		monospace = [
-	  			"JetBrains Mono"
-	  			"DejaVu Sans Mono"
-	  		];
-	  		sansSerif = [ "Noto Sans" ];
-	  		serif = [ "Noto Serif" ];
-	  	};
-	  };
-	};
+    fontconfig = {
+      enable = true;
+      defaultFonts = {
+        monospace = [
+          "JetBrains Mono"
+          "DejaVu Sans Mono"
+        ];
+        sansSerif = [ "Noto Sans" ];
+        serif = [ "Noto Serif" ];
+      };
+    };
+  };
 }

@@ -2,38 +2,37 @@
 
 {
   imports = [
-  	./waybar.nix
+    ./waybar.nix
   ];
-  home.username      = "zendih";
+  home.username = "zendih";
   home.homeDirectory = "/home/zendih";
 
   home.stateVersion = "25.11";
 
   home.packages = with pkgs; [
-  	mpv
-  	qpwgraph
-	gotop
-	ffmpeg
-	vlc  
-	cardinal
-	gimp
-	aseprite
-	steam
-	telegram-desktop
-	signal-desktop
-	fuzzel
+    mpv
+    qpwgraph
+    gotop
+    ffmpeg
+    vlc
+    cardinal
+    gimp
+    aseprite
+    telegram-desktop
+    signal-desktop
+    fuzzel
   ];
 
   programs.kitty.enable = true;
   services.swayosd = {
-  	enable = true;
-	stylePath = ./styles/swayosd.css;
+    enable = true;
+    stylePath = ./styles/swayosd.css;
   };
   programs.swaylock = {
-  	enable = true;
-  	settings = {
-  		indicator-radius = 10;
-  		indicator-thickness = 15;
+    enable = true;
+    settings = {
+      indicator-radius = 10;
+      indicator-thickness = 15;
     };
   };
 
